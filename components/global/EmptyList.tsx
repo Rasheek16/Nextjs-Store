@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 function EmptyList({
-  heading = "NA",
+  heading = "No Products found",
   className,
 }: {
   heading?: string;
