@@ -10,7 +10,11 @@ import ProductReviews from "@/components/reviews/ProductReviews";
 import SubmitReview from "@/components/reviews/SubmitReview";
 import { auth } from "@clerk/nextjs/server";
 
-async function SingleProductPage({ params }: { params: { id: string } }) {
+async function SingleProductPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const id = (await params).id;
   const product = await fetchSingleProduct(id);
   const { name, company, image, description, price } = product;

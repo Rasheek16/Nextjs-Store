@@ -12,10 +12,14 @@ import {
 } from "@/app/utils/action";
 import ImageInputContainer from "@/components/form/ImageInputContainer";
 
-async function EditProductPage({ params }: { params: { id: string } }) {
-  
-  const id  = (await params).id;
-  console.log(id);
+
+
+async function EditProductPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } =await params;
   const product = await fetchAdminProductDetails(id);
   const { name, company, description, price, featured } = product;
   return (
@@ -28,7 +32,7 @@ async function EditProductPage({ params }: { params: { id: string } }) {
           image={product.image}
           text="update image"
         >
-          <input type="hidden" name='id' value={id} />
+          <input type="hidden" name="id" value={id} />
           <input type="hidden" name="url" value={product.image} />
         </ImageInputContainer>
         <FormContainer action={updateProductAction}>

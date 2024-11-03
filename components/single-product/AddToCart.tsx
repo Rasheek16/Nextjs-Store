@@ -8,8 +8,7 @@ import { SubmitButton } from '../form/Buttons';
 import { addToCartAction } from '@/app/utils/action';
 import { useAuth } from '@clerk/nextjs';
 import { ProductSignInButton } from '../form/Buttons';
-
-async function AddToCart({ productId }: { productId: string }) {
+function AddToCart({ productId }: { productId: string }) {
   const [amount, setAmount] = useState(1);
   const { userId } =  useAuth();
   return (
