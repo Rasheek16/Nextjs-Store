@@ -3,6 +3,10 @@
 
 This project is a comprehensive e-commerce application built with Next.js, providing a seamless shopping experience for users.
 
+## Description
+
+This repository hosts a fully functional e-commerce application built using Next.js. The platform offers users a smooth and responsive shopping experience, featuring advanced functionalities like product listing, shopping cart management, user authentication, and a streamlined checkout process. The application is designed with scalability and performance in mind, leveraging modern web technologies to deliver a professional and user-friendly interface.
+
 ## Features
 
 - **Product Listing:** Browse a variety of products with detailed information.
